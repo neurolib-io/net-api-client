@@ -1,0 +1,50 @@
+/*
+ This file is auto-generated, do not edit
+*/
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Xunit;
+using Neurolib.ApiClient.ApiRequests;
+using Neurolib.ApiClient.Bindings;
+
+namespace Neurolib.ApiClient.Tests
+{
+    public class GetItemPropertyInfoBatchUnitTest: NeurolibUnitTest
+    {
+
+        [Fact]
+        public  void TestGetItemPropertyInfo()
+        {
+            Object resp2;
+            Request[] requests = new Request[] {
+                new GetItemPropertyInfo("int_property"),
+                new GetItemPropertyInfo("str_property")
+            };
+
+            BatchResponse batchResponse = client.Send(new Batch(requests));
+            Assert.Equal(200, (int)batchResponse.StatusCodes.ElementAt(0));
+            Assert.Equal ("int",((PropertyInfo) batchResponse[0]).Type);
+            Assert.Equal(200, (int)batchResponse.StatusCodes.ElementAt(1));
+            Assert.Equal ("string",((PropertyInfo) batchResponse[1]).Type);
+        }
+
+        [Fact]
+        public async void TestGetItemPropertyInfoAsync()
+        {
+            Object resp2;
+            Request[] requests = new Request[] {
+                new GetItemPropertyInfo("int_property"),
+                new GetItemPropertyInfo("str_property")
+            };
+
+            BatchResponse batchResponse = await client.SendAsync(new Batch(requests));
+            Assert.Equal(200, (int)batchResponse.StatusCodes.ElementAt(0));
+            Assert.Equal ("int",((PropertyInfo) batchResponse[0]).Type);
+            Assert.Equal(200, (int)batchResponse.StatusCodes.ElementAt(1));
+            Assert.Equal ("string",((PropertyInfo) batchResponse[1]).Type);
+        }
+    }
+}

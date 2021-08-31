@@ -1,0 +1,5 @@
+<map id="Neurolib.ApiClient.ApiRequests.SetUserValues" name="Neurolib.ApiClient.ApiRequests.SetUserValues">
+<area shape="rect" id="node1" title="Set/update (some) property values of a given user" alt="" coords="5,155,248,196"/>
+<area shape="rect" id="node2" href="$classNeurolib_1_1ApiClient_1_1ApiRequests_1_1SetValues.html" title="Set/update (some) property values of an entity" alt="" coords="83,80,170,107"/>
+<area shape="rect" id="node3" href="$classNeurolib_1_1ApiClient_1_1ApiRequests_1_1Request.html" title="Base class for all the requests" alt="" coords="89,5,164,32"/>
+</map>
